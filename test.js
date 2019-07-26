@@ -6,7 +6,7 @@ const Plongeur = require('./plongeur').plongeur;
 plongee=new Plongee();
 plongee.setPn(1000);
 plongee.setNewP(10,4);
-tissu=new Tissu();
+tissu=new Tissu(4);
 tissu.setPambtol(plongee.getPcomp());
 plongeur=new Plongeur();
 plongeur.setDepth();
@@ -22,11 +22,11 @@ describe('For tissu', function() {
     });
     it('should tell us the state of his body', function () {
         tissu.setEtat(32.19);
-        assert.equal(tissu.getEtat(),'sample 1 is feeling not so good.\n');
+        assert.equal(tissu.getEtat(),'sample is feeling not so good.\n');
         tissu.setEtat(1000);
-        assert.equal(tissu.getEtat(),'sample 1 is feeling good.\n');
+        assert.equal(tissu.getEtat(),'sample is feeling good.\n');
         tissu.setEtat(10);
-        assert.equal(tissu.getEtat(),'sample 1 is feeling dying soon.\n')
+        assert.equal(tissu.getEtat(),'sample is feeling dying soon.\n')
     });
 });
 

@@ -1,10 +1,19 @@
 const tissu = class
 {
+    /*
     constructor()
     {
-        this.nom='sample 1';
+        this.nom='sample';
         this.etat='Good';
         this.tht=4;
+        this.pambtol=null;
+    }
+    */
+    constructor( tht )
+    {
+        this.nom='sample';
+        this.etat='Good';
+        this.tht=tht;
         this.pambtol=null;
     }
 
